@@ -50,6 +50,7 @@ function Card({post}) {
 }
 
 function Feed({posts}) {
+  console.log({posts})
   return (<div className="container movedown">
       {posts.map((post) => <Card post={post} key={post.id} />)}
     </div>)

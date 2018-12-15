@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import NewsHunt from './NewsHunt';
 import * as serviceWorker from './serviceWorker';
-// import axios from 'axios';
+import axios from 'axios';
 
 const posts = [
   {
@@ -38,9 +38,32 @@ const posts = [
   }
 ]
 
+function getRedditPosts() {
+  // posts variable will not mutate...why??
+  var posts = []
+  axios.get('https://www.reddit.com/hot.json').then(res => {
+    posts.push(res.data.data.children.map(obj => normalize(obj.data)).slice(0,19))
+  })
+  return posts
+}
+
+function normalize(post) {
+  const normal_post = {
+    id: post.id,
+    title: post.title,
+    url: post.url,
+    comments_url: "https://www.reddit.com" + post.permalink,
+    points: post.score,
+    comments: post.num_comments,
+    author: post.author,
+    source: 'Reddit'
+  }
+  return normal_post
+}
+
 const state = {
   postData: {
-    posts: posts 
+    posts: posts
   }
 };
 
