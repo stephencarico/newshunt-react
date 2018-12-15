@@ -39,10 +39,10 @@ const posts = [
 ]
 
 function getRedditPosts() {
-  // posts variable will not mutate...why??
-  var posts = []
+  // posts variable will only mutate with .push, NOTHING ELSE! WHY??
   axios.get('https://www.reddit.com/hot.json').then(res => {
-    posts.push(res.data.data.children.map(obj => normalize(obj.data)).slice(0,19))
+    posts.concat(res.data.data.children.map(obj => normalize(obj.data)).slice(0,19))
+    console.log(posts)
   })
   return posts
 }
@@ -63,7 +63,7 @@ function normalize(post) {
 
 const state = {
   postData: {
-    posts: posts
+    posts: getRedditPosts()
   }
 };
 
