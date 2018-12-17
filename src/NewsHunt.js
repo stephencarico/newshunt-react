@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import './materialize.min.css';
+import './vendor/fontawesome-free/css/all.min.css';
 
 function Navbar() {
   return (<div className="navbar-fixed">
@@ -41,6 +42,7 @@ function Card({post}) {
               <span>{ post.author }</span>
               <span> | </span>
               <span> { post.points } pts </span>
+              <span className="right"><i class="fa fa-plus-circle"></i></span>
               <span className="right"><a href={post.comments_url}> {post.comments} comments </a></span>
             </div>
           </div>
