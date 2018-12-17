@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import './materialize.min.css';
+import './vendor/materialize.min.css';
 import './vendor/fontawesome-free/css/all.min.css';
 
 function Navbar() {
