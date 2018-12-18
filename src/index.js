@@ -24,7 +24,7 @@ const posts = [
     points: 41733,
     comments: 140,
     author: "mac_is_crack",
-    source: "Reddit"
+    source: "Product Hunt"
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const posts = [
     points: 28699,
     comments: 98,
     author: "mac_is_crack",
-    source: "Reddit"
+    source: "Github"
   }
 ]
 

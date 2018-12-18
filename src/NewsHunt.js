@@ -9,7 +9,7 @@ function Navbar() {
         <div className="nav-wrapper">
           <img className="brand-logo center" src="images/news-hunt-color.png" alt="news-hunt" />
         </div>
-        <div className="container nav-wrapper">
+        <div className="container nav-wrapper hide-mobile">
           <div className="nav-content">
             <span>
               <ul className="tabs tabs-transparent">
@@ -27,7 +27,7 @@ function Navbar() {
 }
 
 function Card({post}) {
-  return (<div className="container">
+  return (<div className="container source">
       <div className="col s12 m7">
         <div className="card horizontal">
           <div className="card-stacked">
