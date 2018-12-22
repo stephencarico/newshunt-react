@@ -53,6 +53,8 @@ function Card({post}) {
 
 function Feed({posts}) {
   console.log({posts})
+  // ERROR: {posts: Array[0]} AND {posts: Array[20]} when logged; not rendering API pulled posts
+  //            BUT renders dummy_posts properly with synchronized {posts: Array[n]}
   return (<div className="container movedown">
       {posts.map((post) => <Card post={post} key={post.id} />)}
     </div>)
