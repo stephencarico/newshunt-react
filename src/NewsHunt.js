@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 import './vendor/materialize.min.css';
 import './vendor/fontawesome-free/css/all.min.css';
@@ -53,8 +54,6 @@ function Card({post}) {
 
 function Feed({posts}) {
   console.log({posts})
-  // ERROR: {posts: Array[0]} AND {posts: Array[20]} when logged; not rendering API pulled posts
-  //            BUT renders dummy_posts properly with synchronized {posts: Array[n]}
   return (<div className="container movedown">
       {posts.map((post) => <Card post={post} key={post.id} />)}
     </div>)
@@ -66,14 +65,25 @@ function Footer() {
   </footer>)
 }
 
-function NewsHunt({postData}) {
+function mapStateToProps(state) {
+  console.log(state.posts)
+  return {
+    postData: state.posts
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {}
+}
+
+const NewsHunt = connect(mapStateToProps, mapDispatchToProps)(function({postData}) {
   return (
     <div>
       <Navbar />
-      <Feed {...postData} />
+      <Feed posts={postData} />
       <Footer />
     </div>
   );
-}
+});
 
 export default NewsHunt;

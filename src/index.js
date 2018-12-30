@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as Redux from 'redux';
+import * as ReactRedux from 'react-redux';
 import './index.css';
 import NewsHunt from './NewsHunt';
 import * as serviceWorker from './serviceWorker';
@@ -63,14 +65,15 @@ function normalize(post) {
   return normal_post
 }
 
-const state = {
-  postData: {
-    posts: getRedditPosts()
-    // posts: dummy_posts
-  }
-};
+// getRedditPosts are getting logged, but not rendered. Using dummy_posts for meanwhile.
+function reducer(state = { posts: dummy_posts }) {
+  return state;
+}
+
+let store = Redux.createStore(reducer);
 
 ReactDOM.render(
-  <NewsHunt {...state} />, 
-  document.getElementById('root'));
+  <ReactRedux.Provider store={store}>
+    <NewsHunt />
+  </ReactRedux.Provider>, document.getElementById('root'));
 serviceWorker.unregister();
