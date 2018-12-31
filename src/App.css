@@ -51,3 +51,8 @@ ul li .right {
 nav.nav-extended .nav-wrapper {
   max-height: 65px
 }
+
+.tab {
+  cursor: pointer;
+}
+

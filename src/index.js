@@ -220,7 +220,7 @@ function reducer(state = { postData: postData.all_posts }, action) {
         });
     default: return state;
   }
-  return state;
+  // return state;
 }
 
 let store = Redux.createStore(reducer);

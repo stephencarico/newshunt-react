@@ -14,11 +14,11 @@ function Navbar({loadAllPosts, loadHackerNewsPosts, loadRedditPosts, loadProduct
           <div className="nav-content">
             <span>
               <ul className="tabs tabs-transparent">
-                <li className="tab"><a onClick={loadAllPosts}>All</a></li>
-                <li className="tab"><a onClick={loadHackerNewsPosts}>Hacker News</a></li>
-                <li className="tab" onClick={loadRedditPosts}><a>Reddit</a></li>
-                <li className="tab"><a onClick={loadProductHuntPosts}>Product Hunt</a></li>
-                <li className="tab"><a onClick={loadGithubTrendingPosts}>Github Trending</a></li>
+                <li className="tab" onClick={loadAllPosts}>All</li>
+                <li className="tab" onClick={loadHackerNewsPosts}>Hacker News</li>
+                <li className="tab" onClick={loadRedditPosts}>Reddit</li>
+                <li className="tab" onClick={loadProductHuntPosts}>Product Hunt</li>
+                <li className="tab" onClick={loadGithubTrendingPosts}>Github Trending</li>
               </ul>
             </span>
           </div>
