@@ -5,7 +5,7 @@ import * as ReactRedux from 'react-redux';
 import './index.css';
 import NewsHunt from './NewsHunt';
 import * as serviceWorker from './serviceWorker';
-import axios from 'axios';
+// import axios from 'axios';
 
 let reddit_posts = [
   {
@@ -139,33 +139,54 @@ let github_trending_posts = [
   }
 ]
 
-function getRedditPosts() {
-  let posts = [];
-  axios.get('https://www.reddit.com/hot.json').then(res => {
-    const reddit_posts = res.data.data.children.map(obj => normalize(obj.data)).slice(0,20)
-    for (let i = 0; i < reddit_posts.length; i++) {
-      posts.push(reddit_posts[i])
-    }
-  });
-  return posts
+function getAllPosts() {
+  let all_posts = [];
+  // .concat does not work
+  for(let i = 0 ; i < 3; i++) {
+    all_posts.push(reddit_posts[i])
+    all_posts.push(hacker_news_posts[i])
+    all_posts.push(product_hunt_posts[i])
+    all_posts.push(github_trending_posts[i])
+  }
+  console.log(all_posts)
+  return all_posts
 }
 
-function normalize(post) {
-  const normal_post = {
-    id: post.id,
-    title: post.title,
-    url: post.url,
-    comments_url: "https://www.reddit.com" + post.permalink,
-    points: post.score,
-    comments: post.num_comments,
-    author: post.author,
-    source: 'Reddit'
-  }
-  return normal_post
+const postData = {
+  all_posts: getAllPosts(),
+  reddit_posts: reddit_posts,
+  hacker_news_posts: hacker_news_posts,
+  product_hunt_posts: product_hunt_posts,
+  github_trending_posts: github_trending_posts
 }
+
+// function getRedditPosts() {
+//   let posts = [];
+//   axios.get('https://www.reddit.com/hot.json').then(res => {
+//     const reddit_posts = res.data.data.children.map(obj => normalize(obj.data)).slice(0,20)
+//     for (let i = 0; i < reddit_posts.length; i++) {
+//       posts.push(reddit_posts[i])
+//     }
+//   });
+//   return posts
+// }
+
+// function normalize(post) {
+//   const normal_post = {
+//     id: post.id,
+//     title: post.title,
+//     url: post.url,
+//     comments_url: "https://www.reddit.com" + post.permalink,
+//     points: post.score,
+//     comments: post.num_comments,
+//     author: post.author,
+//     source: 'Reddit'
+//   }
+//   return normal_post
+// }
 
 // getRedditPosts are getting logged, but not rendered. Using dummy_posts for meanwhile.
-function reducer(state = { posts: reddit_posts }) {
+function reducer(state = { postData: postData }) {
   return state;
 }
 

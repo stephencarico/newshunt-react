@@ -66,9 +66,9 @@ function Footer() {
 }
 
 function mapStateToProps(state) {
-  console.log(state.posts)
+  console.log(state.postData)
   return {
-    postData: state.posts
+    postData: state.postData
   }
 }
 
@@ -80,7 +80,7 @@ const NewsHunt = connect(mapStateToProps, mapDispatchToProps)(function({postData
   return (
     <div>
       <Navbar />
-      <Feed posts={postData} />
+      <Feed posts={postData.all_posts} />
       <Footer />
     </div>
   );
