@@ -186,7 +186,40 @@ const postData = {
 // }
 
 // getRedditPosts are getting logged, but not rendered. Using dummy_posts for meanwhile.
-function reducer(state = { postData: postData }) {
+function reducer(state = { postData: postData.all_posts }, action) {
+  switch (action.type) {
+    case 'LOAD_ALL_POSTS':
+      return Object.assign(
+        {},
+        state, {
+          postData: postData.all_posts
+        });    
+    case 'LOAD_HACKER_NEWS_POSTS':
+      return Object.assign(
+        {},
+        state, {
+          postData: postData.hacker_news_posts
+        });    
+    case 'LOAD_REDDIT_POSTS':
+      return Object.assign(
+        {},
+        state, {
+          postData: postData.reddit_posts
+        });    
+    case 'LOAD_PRODUCT_HUNT_POSTS':
+      return Object.assign(
+        {},
+        state, {
+          postData: postData.product_hunt_posts
+        });    
+    case 'LOAD_GITHUB_TRENDING_POSTS':
+      return Object.assign(
+        {},
+        state, {
+          postData: postData.github_trending_posts
+        });
+    default: return state;
+  }
   return state;
 }
 

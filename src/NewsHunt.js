@@ -4,7 +4,7 @@ import './App.css';
 import './vendor/materialize.min.css';
 import './vendor/fontawesome-free/css/all.min.css';
 
-function Navbar() {
+function Navbar({loadAllPosts, loadHackerNewsPosts, loadRedditPosts, loadProductHuntPosts, loadGithubTrendingPosts}) {
   return (<div className="navbar-fixed">
       <nav className="nav-extended">
         <div className="nav-wrapper">
@@ -14,11 +14,11 @@ function Navbar() {
           <div className="nav-content">
             <span>
               <ul className="tabs tabs-transparent">
-                <li className="tab"><a href="/#/">All</a></li>
-                <li className="tab"><a href="/#/">Hacker News</a></li>
-                <li className="tab"><a href="/#/">Reddit</a></li>
-                <li className="tab"><a href="/#/">Product Hunt</a></li>
-                <li className="tab"><a href="/#/">Github Trending</a></li>
+                <li className="tab"><a onClick={loadAllPosts}>All</a></li>
+                <li className="tab"><a onClick={loadHackerNewsPosts}>Hacker News</a></li>
+                <li className="tab" onClick={loadRedditPosts}><a>Reddit</a></li>
+                <li className="tab"><a onClick={loadProductHuntPosts}>Product Hunt</a></li>
+                <li className="tab"><a onClick={loadGithubTrendingPosts}>Github Trending</a></li>
               </ul>
             </span>
           </div>
@@ -68,19 +68,35 @@ function Footer() {
 function mapStateToProps(state) {
   console.log(state.postData)
   return {
-    postData: state.postData
+    posts: state.postData
   }
 }
 
 function mapDispatchToProps(dispatch) {
-  return {}
+  return {
+    loadAllPosts: () => {
+      dispatch({ type: 'LOAD_ALL_POSTS'});
+    },
+    loadHackerNewsPosts: () => {
+      dispatch({ type: 'LOAD_HACKER_NEWS_POSTS'});
+    },    
+    loadRedditPosts: () => {
+      dispatch({ type: 'LOAD_REDDIT_POSTS'});
+    },    
+    loadProductHuntPosts: () => {
+      dispatch({ type: 'LOAD_PRODUCT_HUNT_POSTS'});
+    },    
+    loadGithubTrendingPosts: () => {
+      dispatch({ type: 'LOAD_GITHUB_TRENDING_POSTS'});
+    },
+  }
 }
 
-const NewsHunt = connect(mapStateToProps, mapDispatchToProps)(function({postData}) {
+const NewsHunt = connect(mapStateToProps, mapDispatchToProps)(function({posts, loadAllPosts, loadHackerNewsPosts, loadRedditPosts, loadProductHuntPosts, loadGithubTrendingPosts}) {
   return (
     <div>
-      <Navbar />
-      <Feed posts={postData.all_posts} />
+      <Navbar loadAllPosts={loadAllPosts} loadHackerNewsPosts={loadHackerNewsPosts} loadRedditPosts={loadRedditPosts} loadProductHuntPosts={loadProductHuntPosts} loadGithubTrendingPosts={loadGithubTrendingPosts}/>
+      <Feed posts={posts} />
       <Footer />
     </div>
   );
