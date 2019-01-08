@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Post = ({post}) => {
   return (<div className="container source">
@@ -23,6 +24,10 @@ const Post = ({post}) => {
         </div>
       </div>
     </div>)
+}
+
+Post.propTypes = {
+  post: PropTypes.object.isRequired
 }
 
 export default Post

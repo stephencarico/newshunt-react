@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 
 let reddit_posts = [
   {
@@ -129,28 +129,28 @@ let github_trending_posts = [
   }
 ]
 
-let new_reddit_posts = () => {
-  axios.get('https://www.reddit.com/hot.json').then(res => {
-    reddit_posts = res.data.data.children.map(obj => normalize(obj.data)).slice(0,20)
-    // for (let i = 0; i < new_reddit_posts.length; i++) {
-    //   reddit_posts.push(new_reddit_posts[i])
-    // }
-  });
-}
+// let new_reddit_posts = () => {
+//   axios.get('https://www.reddit.com/hot.json').then(res => {
+//     reddit_posts = res.data.data.children.map(obj => normalize(obj.data)).slice(0,20)
+//     // for (let i = 0; i < new_reddit_posts.length; i++) {
+//     //   reddit_posts.push(new_reddit_posts[i])
+//     // }
+//   });
+// }
 
-function normalize(post) {
-  const normal_post = {
-    id: post.id,
-    title: post.title,
-    url: post.url,
-    comments_url: "https://www.reddit.com" + post.permalink,
-    points: post.score,
-    comments: post.num_comments,
-    author: post.author,
-    source: 'Reddit'
-  }
-  return normal_post
-}
+// function normalize(post) {
+//   const normal_post = {
+//     id: post.id,
+//     title: post.title,
+//     url: post.url,
+//     comments_url: "https://www.reddit.com" + post.permalink,
+//     points: post.score,
+//     comments: post.num_comments,
+//     author: post.author,
+//     source: 'Reddit'
+//   }
+//   return normal_post
+// }
 
 function getAllPosts() {
   let all_posts = [];
