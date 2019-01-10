@@ -55,4 +55,6 @@ nav.nav-extended .nav-wrapper {
 .tab {
   cursor: pointer;
 }
-
+a:hover {
+  color: #60caff;
+}
