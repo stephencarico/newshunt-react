@@ -1,12 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
-import * as Redux from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import * as ReactRedux from 'react-redux';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers';
 import NewsHunt from './containers/NewsHunt';
-import rootReducer from './reducers'
 import * as serviceWorker from './serviceWorker';
 
-let store = Redux.createStore(rootReducer);
+const middleware = [ thunk ];
+
+const store = createStore(
+  rootReducer,
+  applyMiddleware(...middleware)
+);
 
 render(
   <ReactRedux.Provider store={store}>
