@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from './Navbar';
-import VisibleFeed from '../containers/VisibleFeed';
-import Footer from './Footer';
-import '../App.css';
+import Navbar from '../components/Navbar';
+import VisibleFeed from './VisibleFeed';
+import Footer from '../components/Footer';
 import '../vendor/materialize.min.css';
 import '../vendor/fontawesome-free/css/all.min.css';
+import '../NewsHunt.css';
 
 const NewsHunt = () => (
   <div>

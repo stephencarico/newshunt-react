@@ -1,29 +1,29 @@
 nav {
-  background-color: #fff !important;
+  background-color: #fff;
 }
 
 body {
-  background-color: #f4f4f4 !important;
+  background-color: #f4f4f4;
 }
 
 ul li a {
-  color: #666 !important;
+  color: #666;
 }
 
 ul li {
-  color: #666 !important;
+  color: #666;
 }
 
 .brand-logo {
-  color: #666 !important;
+  color: #666;
 }
 
 span {
-  margin-right: 0.35em !important;
+  margin-right: 0.35em;
 }
 
 .card-action {
-  color: #666 !important;
+  color: #666;
 }
 
 footer {
