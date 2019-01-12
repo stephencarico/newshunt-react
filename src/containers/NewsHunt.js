@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { fetchPostsIfNeeded } from '../actions';
+import { connect } from 'react-redux';
 import Navbar from '../components/Navbar';
 import VisibleFeed from './VisibleFeed';
 import Footer from '../components/Footer';
@@ -6,12 +8,24 @@ import '../vendor/materialize.min.css';
 import '../vendor/fontawesome-free/css/all.min.css';
 import '../NewsHunt.css';
 
-const NewsHunt = () => (
-  <div>
-    <Navbar />
-    <VisibleFeed />
-    <Footer />
-  </div>
-);
+class NewsHunt extends Component {
+  componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(fetchPostsIfNeeded());
+  }
 
-export default NewsHunt;
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <VisibleFeed />
+        <Footer />
+      </div>
+    )
+  }
+}
+
+const mapStateToProps = state => ({
+})
+
+export default connect(mapStateToProps)(NewsHunt);
