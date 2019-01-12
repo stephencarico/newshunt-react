@@ -20,13 +20,9 @@ const getVisiblePosts = (posts, filter) => {
 }
 
 const mapStateToProps = state => ({
-  posts: getVisiblePosts(state.posts, state.visibilityFilter)
-})
-
-const mapDispatchToProps = dispatch => ({
+  posts: getVisiblePosts(state.posts.items, state.visibilityFilter)
 })
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(Feed)

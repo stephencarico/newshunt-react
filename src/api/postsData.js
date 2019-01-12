@@ -130,12 +130,10 @@ let github_trending_posts = [
 ]
 
 // let new_reddit_posts = () => {
-//   axios.get('https://www.reddit.com/hot.json').then(res => {
-//     reddit_posts = res.data.data.children.map(obj => normalize(obj.data)).slice(0,20)
-//     // for (let i = 0; i < new_reddit_posts.length; i++) {
-//     //   reddit_posts.push(new_reddit_posts[i])
-//     // }
-//   });
+//   let reddit_posts = []
+//   fetch('https://www.reddit.com/hot.json').then(res => {
+//     reddit_posts = res.data.data.children.map(obj => normalize(obj.data)).slice(0,20)});
+//   return reddit_posts
 // }
 
 // function normalize(post) {
