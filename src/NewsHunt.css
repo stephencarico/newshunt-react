@@ -52,9 +52,20 @@ nav.nav-extended .nav-wrapper {
   max-height: 65px
 }
 
-.tab {
+.tab:hover {
   cursor: pointer;
+  background-color: #039be5;
+  color: white;
 }
+
 a:hover {
   color: #60caff;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+ul > .tabs {
+  display: inline-block;
 }
