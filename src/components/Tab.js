@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Tab = ({ onClick, active, children }) => (
+const Tab = ({ active, children, onClick }) => (
     <li
-      className="tab"
+      className={ "tab" + ( active ? " active" : "") }
       onClick={onClick}
       disabled={active}
     >

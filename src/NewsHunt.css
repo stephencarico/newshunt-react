@@ -63,9 +63,13 @@ a:hover {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 ul > .tabs {
   display: inline-block;
+}
+.tabs > .active {
+  background-color: #ffab40 !important;
+  color: white;
 }
