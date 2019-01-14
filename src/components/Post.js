@@ -18,7 +18,7 @@ const Post = ({post}) => {
               <span> | </span>
               <span> { post.points } pts </span>
               <span className="right"><i className="fa fa-plus-circle"></i></span>
-              <span className="right"><a href={post.comments_url} target="_blank"> {post.comments} comments </a></span>
+              <span className="right"><a href={post.comments_url} target="_blank" rel="noopener noreferrer"> {post.comments} comments </a></span>
             </div>
           </div>
         </div>

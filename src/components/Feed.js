@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Feed = ({ posts }) => (
   <div className="container movedown">
-    {posts.map((post) => <Post post={post} key={post.id} />)}
+    {posts.map((post, i) => <Post post={post} key={i} />)}
   </div>
 )
 

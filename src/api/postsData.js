@@ -1,5 +1,3 @@
-// import axios from 'axios'
-
 let reddit_posts = [
   {
     id: 'awerf',
@@ -128,27 +126,6 @@ let github_trending_posts = [
     source: "Github Trending"
   }
 ]
-
-// let new_reddit_posts = () => {
-//   let reddit_posts = []
-//   fetch('https://www.reddit.com/hot.json').then(res => {
-//     reddit_posts = res.data.data.children.map(obj => normalize(obj.data)).slice(0,20)});
-//   return reddit_posts
-// }
-
-// function normalize(post) {
-//   const normal_post = {
-//     id: post.id,
-//     title: post.title,
-//     url: post.url,
-//     comments_url: "https://www.reddit.com" + post.permalink,
-//     points: post.score,
-//     comments: post.num_comments,
-//     author: post.author,
-//     source: 'Reddit'
-//   }
-//   return normal_post
-// }
 
 function getAllPosts() {
   let all_posts = [];
