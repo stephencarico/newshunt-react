@@ -34,10 +34,7 @@ export const receivePosts = json => ({
 
 const fetchPosts = () => dispatch => {
   dispatch(requestPosts())
-  return fetchGithubPosts().then(json => dispatch(receivePosts(json)))
-  // return fetch('https://www.reddit.com/hot.json')
-  //   .then(response => response.json())
-  //   .then(json => dispatch(receivePosts(json.data.children.map(child => normalize(child.data)))))
+  return fetchRedditPosts().then(json => dispatch(receivePosts(json)))
 }
 
 const shouldFetchPosts = (state) => {
