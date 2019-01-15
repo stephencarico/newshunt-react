@@ -1,5 +1,3 @@
-import { fetchAllPosts, fetchRedditPosts, fetchGithubPosts } from './fetchedData'
-
 export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',
   filter
@@ -27,14 +25,15 @@ export const requestPosts = () => ({
 
 export const receivePosts = json => ({
   type: RECEIVE_POSTS,
-  // I want json to equal ALL retrieved posts from ALL sources
   posts: json,
   receivedAt: Date.now()
 })
 
 const fetchPosts = () => dispatch => {
   dispatch(requestPosts())
-  return fetchRedditPosts().then(json => dispatch(receivePosts(json)))
+  return fetch('https://newshunt-server.herokuapp.com/api/all')
+    .then(response => response.json())
+    .then(json => dispatch(receivePosts(json.map(child => child))))
 }
 
 const shouldFetchPosts = (state) => {
