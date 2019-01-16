@@ -1,6 +1,7 @@
 nav {
   background-color: #262626;
   position: fixed;
+  z-index: +1;
 }
 
 nav .brand-logo {
@@ -26,10 +27,6 @@ nav ul li.active {
   width: 100%;
 }
 
-.card-action {
-  color: #666;
-}
-
 span {
   margin-right: 0.35em;
 }
@@ -43,19 +40,16 @@ footer {
 .movedown {
   position: relative;
   padding-top: 7em;
-  z-index: -1;
 }
 
 .brand-logo {
-  max-height: 70px;
+  max-height: 2.3em;
 }
 
 .card-content {
-  padding: 12px !important;
-}
-
-ul li .right {
-  color: #fff !important;
+  padding: 0.8em !important;
+  padding-left: 1.5em !important;
+  padding-right: 1.5em !important;
 }
 
 .tab:hover {
@@ -64,17 +58,6 @@ ul li .right {
   color: white;
 }
 
-/*a:hover {
-  color: #60caff;
-}*/
-
 .card:hover {
   transform: scale(1.02);
-}
-
-ul > .tabs {
-  display: inline-block;
-}
-.tabs > .active {
-  color: white;
 }

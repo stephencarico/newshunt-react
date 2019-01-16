@@ -11,10 +11,10 @@ const Post = ({post}) => {
           </a>
         </div>
         <div className="card-content">
-          <h5>{ post.title }</h5>
+          <h6>{ post.title }</h6>
         </div>
         <div className="card-action">
-          <a href={ post.comments_url }>{ post.comments } comments</a>
+          <a href={ post.comments_url } target="_blank">{ post.comments } comments</a>
           <span>{ post.source }</span>
           <span> | </span>
           <span> { post.points } pts by { post.author } </span>
