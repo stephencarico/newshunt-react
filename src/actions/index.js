@@ -31,10 +31,21 @@ export const receivePosts = json => ({
   receivedAt: Date.now()
 })
 
+const splitArray = json => dispatch => {
+  let posts = []
+  json.forEach((item, index) => {
+    if (index % 2) {
+      posts.push([posts[index - 1], posts[index]]);
+    }
+  });
+  return dispatch(receivePosts(posts))
+}
+
 const fetchPosts = () => dispatch => {
   dispatch(requestPosts())
   // TESTING
-  return dispatch(receivePosts(getAllPosts().map(child => child)))
+  // return dispatch(receivePosts(getAllPosts().map(child => child)))
+  // return splitArray(getAllPosts().map(child => child))
   // DEPLOYMENT
   return fetch('https://newshunt-server.herokuapp.com/api/all')
     .then(response => response.json())

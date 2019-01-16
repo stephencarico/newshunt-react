@@ -2,28 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Post = ({post}) => {
-  return (<div className="container source">
-      <div className="col s12 m7">
-        <div className="card horizontal">
-          <div className="card-stacked">
-            <a href={post.url} target="_blank" rel="noopener noreferrer">
-              <div className="card-content">
-                <h6>{ post.title }</h6>
-              </div>
-            </a>
-            <div className="card-action">
-              <span><b>{ post.source }</b></span>
-              <span> | </span>
-              <span>{ post.author }</span>
-              <span> | </span>
-              <span> { post.points } pts </span>
-              <span className="right"><i className="fa fa-plus-circle"></i></span>
-              <span className="right"><a href={post.comments_url} target="_blank" rel="noopener noreferrer"> {post.comments} comments </a></span>
-            </div>
-          </div>
+  return (<div className="row">
+    <div className="col s12 m6">
+      <div className="card">
+        <div className="card-image">
+          <img src="images/sample-1.jpg" alt={ post.author }/>
+          <span className="card-title"><b>{ post.author }</b></span>
+        </div>
+        <div className="card-content">
+          <p>{ post.title }</p>
+        </div>
+        <div className="card-action">
+          <a href={ post.comments_url }>{ post.comments } comments</a>
+          <span>{ post.source }</span>
+          <span> | </span>
+          <span> { post.points } pts </span>
         </div>
       </div>
-    </div>)
+    </div>
+  </div>)
 }
 
 Post.propTypes = {
