@@ -27,6 +27,7 @@ span {
 }
 
 footer {
+  position: relative;
   padding-top: 100px;
   text-align: center;
 }

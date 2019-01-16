@@ -126,8 +126,7 @@ let github_trending_posts = [
     source: "Github Trending"
   }
 ]
-
-function getAllPosts() {
+export const getAllPosts = () => {
   let all_posts = [];
   // .concat does not work
   for(let i = 0 ; i < 3; i++) {
@@ -138,5 +137,3 @@ function getAllPosts() {
   }
   return all_posts
 }
-
-export default getAllPosts();

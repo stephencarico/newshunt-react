@@ -1,3 +1,5 @@
+import { getAllPosts } from '../api/postsData'
+
 export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',
   filter
@@ -31,6 +33,9 @@ export const receivePosts = json => ({
 
 const fetchPosts = () => dispatch => {
   dispatch(requestPosts())
+  // TESTING
+  return dispatch(receivePosts(getAllPosts().map(child => child)))
+  // DEPLOYMENT
   return fetch('https://newshunt-server.herokuapp.com/api/all')
     .then(response => response.json())
     .then(json => dispatch(receivePosts(json.map(child => child))))
