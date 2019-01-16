@@ -34,7 +34,7 @@ export const receivePosts = json => ({
 const fetchPosts = () => dispatch => {
   dispatch(requestPosts())
   // TESTING
-  return dispatch(receivePosts(getAllPosts().map(child => child)))
+  // return dispatch(receivePosts(getAllPosts().map(child => child)))
   // DEPLOYMENT
   return fetch('https://newshunt-server.herokuapp.com/api/all')
     .then(response => response.json())
