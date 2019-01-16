@@ -92,6 +92,16 @@ let product_hunt_posts = [
     comments: 3,
     author: "krishkhubchand",
     source: "Product Hunt"
+  },
+  {
+    id: '13',
+    title: "Magic Copy - Magically share text & links across your devices",
+    url: "https://magiccopy.xyz/",
+    comments_url: "https://magiccopy.xyz/",
+    points: 189,
+    comments: 33,
+    author: "dinuka_jayasuriya",
+    source: "Product Hunt"
   }
 ]
 let github_trending_posts = [
