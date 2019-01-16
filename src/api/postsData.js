@@ -6,6 +6,7 @@ let reddit_posts = [
     comments_url: "https://www.reddit.com/r/aww/comments/a5vlv6/im_just_really_happy_to_be_here/",
     points: 23607,
     comments: 109,
+    image: "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjwlo-X-PLfAhUoHDQIHemtCoIQjRx6BAgBEAU&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Flogodesign%2F&psig=AOvVaw0j37uZrBJAz7ttZ1NXoIlA&ust=1547749987996721",
     author: "mac_is_crack",
     source: "Reddit"
   },

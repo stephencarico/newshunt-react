@@ -6,17 +6,18 @@ const Post = ({post}) => {
     <div className="col s12 m6">
       <div className="card">
         <div className="card-image">
-          <img src="images/sample-1.jpg" alt={ post.author }/>
-          <span className="card-title"><b>{ post.author }</b></span>
+          <a href={ post.url } target="_blank" rel="noopener noreferrer">
+            <img src="images/sample-1.jpg" alt={ post.author }/>
+          </a>
         </div>
         <div className="card-content">
-          <p>{ post.title }</p>
+          <h5>{ post.title }</h5>
         </div>
         <div className="card-action">
           <a href={ post.comments_url }>{ post.comments } comments</a>
           <span>{ post.source }</span>
           <span> | </span>
-          <span> { post.points } pts </span>
+          <span> { post.points } pts by { post.author } </span>
         </div>
       </div>
     </div>

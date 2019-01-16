@@ -26,7 +26,7 @@ const OldPost = ({post}) => {
     </div>)
 };
 
-Post.propTypes = {
+OldPost.propTypes = {
   post: PropTypes.object.isRequired
 };
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Post from './Post'
+import OldPost from './OldPost'
 import PropTypes from 'prop-types'
 
 const Feed = ({ posts }) => (

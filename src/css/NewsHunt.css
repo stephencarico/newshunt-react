@@ -7,6 +7,14 @@ nav .brand-logo {
   padding: 1rem;
 }
 
+nav ul li {
+  padding: 1em;
+}
+
+nav ul li.active {
+  background-color: #ffab40;
+}
+
 .card .card-image img {
   display: block;
   border-radius: 2px 2px 0 0;
@@ -18,32 +26,12 @@ nav .brand-logo {
   width: 100%;
 }
 
-/*ul li a {
-  color: #666;
-}
-
-ul li {
-  color: #666;
-}*/
-
-.brand-logo {
+.card-action {
   color: #666;
 }
 
 span {
   margin-right: 0.35em;
-}
-
-nav ul li {
-  padding: 1em;
-}
-
-nav ul li.active {
-  background-color: #ffab40;
-}
-
-.card-action {
-  color: #666;
 }
 
 footer {
@@ -59,7 +47,6 @@ footer {
 }
 
 .brand-logo {
-  /*width: 170px;*/
   max-height: 70px;
 }
 
@@ -71,19 +58,15 @@ ul li .right {
   color: #fff !important;
 }
 
-/*nav.nav-extended .nav-wrapper {
-  max-height: 65px
-}*/
-
 .tab:hover {
   cursor: pointer;
   background-color: #039be5;
   color: white;
 }
 
-a:hover {
+/*a:hover {
   color: #60caff;
-}
+}*/
 
 .card:hover {
   transform: scale(1.02);
@@ -93,6 +76,5 @@ ul > .tabs {
   display: inline-block;
 }
 .tabs > .active {
-  /*background-color: #ffab40 !important;*/
   color: white;
 }
