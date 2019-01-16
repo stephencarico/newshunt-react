@@ -1,18 +1,23 @@
 nav {
-  background-color: #fff;
+  background-color: #262626;
+  position: fixed;
 }
 
-body {
+nav .brand-logo {
+  padding: 1rem;
+}
+
+/*body {
   background-color: #f4f4f4;
-}
+}*/
 
-ul li a {
+/*ul li a {
   color: #666;
 }
 
 ul li {
   color: #666;
-}
+}*/
 
 .brand-logo {
   color: #666;
@@ -22,18 +27,28 @@ span {
   margin-right: 0.35em;
 }
 
+nav ul li {
+  padding: 1em;
+}
+
+nav ul li.active {
+  background-color: #ffab40;
+}
+
 .card-action {
   color: #666;
 }
 
 footer {
   position: relative;
-  padding-top: 100px;
+  padding-top: 2em;
   text-align: center;
 }
 
 .movedown {
-  padding-top: 75px;
+  position: relative;
+  padding-top: 7em;
+  z-index: -1;
 }
 
 .brand-logo {
@@ -49,9 +64,9 @@ ul li .right {
   color: #fff !important;
 }
 
-nav.nav-extended .nav-wrapper {
+/*nav.nav-extended .nav-wrapper {
   max-height: 65px
-}
+}*/
 
 .tab:hover {
   cursor: pointer;
@@ -71,6 +86,6 @@ ul > .tabs {
   display: inline-block;
 }
 .tabs > .active {
-  background-color: #ffab40 !important;
+  /*background-color: #ffab40 !important;*/
   color: white;
 }

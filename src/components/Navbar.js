@@ -3,26 +3,18 @@ import FilterTab from '../containers/FilterTab'
 import { VisibilityFilters } from '../actions'
 
 const Navbar = () => (
-  <div className="navbar-fixed">
-      <nav className="nav-extended">
-        <div className="nav-wrapper">
-          <img className="brand-logo center" src="images/news-hunt-color.png" alt="news-hunt" />
-        </div>
-        <div className="container nav-wrapper hide-mobile">
-          <div className="nav-content">
-            <span>
-              <ul className="tabs tabs-fixed-width tabs-transparent">
-                <FilterTab filter={VisibilityFilters.LOAD_ALL}>All</FilterTab>
-                <FilterTab filter={VisibilityFilters.LOAD_HACKER_NEWS}>Hacker News</FilterTab>
-                <FilterTab filter={VisibilityFilters.LOAD_REDDIT}>Reddit</FilterTab>
-                <FilterTab filter={VisibilityFilters.LOAD_PRODUCT_HUNT}>Product Hunt</FilterTab>
-                <FilterTab filter={VisibilityFilters.LOAD_GITHUB_TRENDING}>Github Trending</FilterTab>
-              </ul>
-            </span>
-          </div>
-        </div>
-      </nav>
+  <nav>
+    <div className="nav-wrapper container">
+      <img className="brand-logo" src="images/threadz-logo.png"></img>
+      <ul id="nav-mobile" className="right hide-on-med-and-down">
+        <FilterTab filter={VisibilityFilters.LOAD_ALL}>All</FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_HACKER_NEWS}>Hacker News</FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_REDDIT}>Reddit</FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_PRODUCT_HUNT}>Product Hunt</FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_GITHUB_TRENDING}>Github Trending</FilterTab>
+      </ul>
     </div>
+  </nav>
 )
 
 export default Navbar
