@@ -1,10 +1,11 @@
 // import postData from '../api/postsData'
-import { INVALIDATE_SOURCE, REQUEST_POSTS, RECEIVE_POSTS } from '../actions'
+import { INVALIDATE_SOURCE, REQUEST_POSTS, RECEIVE_POSTS, ERROR } from '../actions'
 
 const posts = (state = {
   initialLoad: true,
   isFetching: false,
   didInvalidate: false,
+  hasError: false,
   items: []
 }, action) => {
   switch (action.type) {
@@ -29,6 +30,12 @@ const posts = (state = {
         initialLoad: false,
         items: action.posts,
         lastUpdated: action.receivedAt
+      }
+    case ERROR:
+      return {
+        ...state,
+        isFetching: false,
+        hasError: true
       }
     default:
       return state

@@ -16,6 +16,7 @@ export const VisibilityFilters = {
 export const REQUEST_POSTS = 'REQUEST_POSTS';
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const INVALIDATE_SOURCE = 'INVALIDATE_SOURCE';
+export const ERROR = 'ERROR';
 
 export const invalidateSource = () => ({
   type: INVALIDATE_SOURCE
@@ -31,25 +32,30 @@ export const receivePosts = json => ({
   receivedAt: Date.now()
 })
 
-const splitArray = json => dispatch => {
-  let posts = []
-  json.forEach((item, index) => {
-    if (index % 2) {
-      posts.push([posts[index - 1], posts[index]]);
-    }
-  });
-  return dispatch(receivePosts(posts))
-}
+export const errors = () => ({
+  type: ERROR
+})
+
+// const splitArray = json => dispatch => {
+//   let posts = []
+//   json.forEach((item, index) => {
+//     if (index % 2) {
+//       posts.push([posts[index - 1], posts[index]]);
+//     }
+//   });
+//   return dispatch(receivePosts(posts))
+// }
 
 const fetchPosts = () => dispatch => {
   dispatch(requestPosts())
   // TESTING
-  return dispatch(receivePosts(getAllPosts().map(child => child)))
+  // return dispatch(receivePosts(getAllPosts().map(child => child)))
   // return splitArray(getAllPosts().map(child => child))
   // DEPLOYMENT
   return fetch('https://newshunt-server.herokuapp.com/api/all')
     .then(response => response.json())
     .then(json => dispatch(receivePosts(json.map(child => child))))
+    .catch(error => dispatch(errors()))
 }
 
 const shouldFetchPosts = (state) => {

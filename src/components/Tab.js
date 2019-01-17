@@ -13,8 +13,7 @@ const Tab = ({ active, children, onClick }) => (
 
 Tab.propTypes = {
   onClick: PropTypes.func.isRequired,
-  active: PropTypes.bool,
-  children: PropTypes.string.isRequired
+  active: PropTypes.bool
 }
 
 export default Tab

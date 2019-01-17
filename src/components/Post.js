@@ -14,7 +14,7 @@ const Post = ({post}) => {
         </div>
       </a>
         <div className="card-action">
-          <a href={ post.comments_url } target="_blank">{ post.comments } comments</a>
+          <a href={ post.comments_url } target="_blank" rel="noopener noreferrer">{ post.comments } comments</a>
           <span>{ post.source }</span>
           <span> | </span>
           <span> { post.points } pts by { post.author } </span>
