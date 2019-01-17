@@ -16,6 +16,23 @@ nav ul li.active {
   background-color: #ffab40;
 }
 
+@media only screen and (min-width: 992px) {
+    .nav-content {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .movedown {
+        position: relative;
+        padding-top: 8.5em !important;;
+    }
+}
+
+.nav-content {
+  background-color: #262626;
+}
+
 .card .card-image img {
   display: block;
   border-radius: 2px 2px 0 0;
