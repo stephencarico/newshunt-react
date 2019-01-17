@@ -1,3 +1,4 @@
+// Images Available as: data.children.child.data.thumbnail
 let reddit_posts = [
   {
     id: 'awerf',
@@ -6,7 +7,7 @@ let reddit_posts = [
     comments_url: "https://www.reddit.com/r/aww/comments/a5vlv6/im_just_really_happy_to_be_here/",
     points: 23607,
     comments: 109,
-    image: "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjwlo-X-PLfAhUoHDQIHemtCoIQjRx6BAgBEAU&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Flogodesign%2F&psig=AOvVaw0j37uZrBJAz7ttZ1NXoIlA&ust=1547749987996721",
+    image: "https://i.redd.it/f4dihfvuy2421.png",
     author: "mac_is_crack",
     source: "Reddit"
   },
@@ -17,6 +18,7 @@ let reddit_posts = [
     comments_url: "https://www.reddit.com/r/aww/comments/a5vlv6/im_just_really_happy_to_be_here/",
     points: 41733,
     comments: 140,
+    image: "https://external-preview.redd.it/aX8AiJwaUzor0RbnKWkf7MxPAahu9CFjHCN_Nhysg5I.jpg?auto=webp&s=f62e36cd3e3cc0f8afcca1f17e96941009b56861",
     author: "mac_is_crack",
     source: "Reddit"
   },
@@ -27,10 +29,12 @@ let reddit_posts = [
     comments_url: "https://www.reddit.com/r/aww/comments/a5vlv6/im_just_really_happy_to_be_here/",
     points: 28699,
     comments: 98,
+    image: "https://i.redd.it/wxfyd6mdkpg11.jpg",
     author: "mac_is_crack",
     source: "Reddit"
   }
 ]
+// No images available
 let hacker_news_posts = [
   {
     id: '1',
@@ -39,6 +43,7 @@ let hacker_news_posts = [
     comments_url: "https://www.nytimes.com/2018/12/30/obituaries/lawrence-g-roberts-dies-at-81.html",
     points: 257,
     comments: 28,
+    image: "",
     author: "jbegley",
     source: "Hacker News"
   },
@@ -49,6 +54,7 @@ let hacker_news_posts = [
     comments_url: "http://cslibrary.stanford.edu/101/EssentialC.pdf",
     points: 150,
     comments: 69,
+    image: "",
     author: "saadadasd",
     source: "Hacker News"
   },
@@ -59,10 +65,12 @@ let hacker_news_posts = [
     comments_url: "https://media.ccc.de/v/35c3-9941-how_facebook_tracks_you_on_android/",
     points: 486,
     comments: 162,
+    image: "",
     author: "gala8y",
     source: "Hacker News"
   }
 ]
+// Images available as: thumbnail.image_url
 let product_hunt_posts = [
   {
     id: '4',
@@ -71,6 +79,7 @@ let product_hunt_posts = [
     comments_url: "https://uisounds.prototypr.io/",
     points: 231,
     comments: 19,
+    image: "",
     author: "graeme_fulton",
     source: "Product Hunt"
   },
@@ -81,6 +90,7 @@ let product_hunt_posts = [
     comments_url: "https://magiccopy.xyz/",
     points: 189,
     comments: 33,
+    image: "",
     author: "dinuka_jayasuriya",
     source: "Product Hunt"
   },
@@ -91,20 +101,12 @@ let product_hunt_posts = [
     comments_url: "https://getzeno.app/review2018",
     points: 193,
     comments: 3,
+    image: "",
     author: "krishkhubchand",
-    source: "Product Hunt"
-  },
-  {
-    id: '13',
-    title: "Magic Copy - Magically share text & links across your devices",
-    url: "https://magiccopy.xyz/",
-    comments_url: "https://magiccopy.xyz/",
-    points: 189,
-    comments: 33,
-    author: "dinuka_jayasuriya",
     source: "Product Hunt"
   }
 ]
+// No images available
 let github_trending_posts = [
   {
     id: '7',

@@ -5,14 +5,14 @@ const Post = ({post}) => {
   return (<div className="row">
     <div className="col s12 m6">
       <div className="card">
+      <a href={ post.url } target="_blank" rel="noopener noreferrer">
         <div className="card-image">
-          <a href={ post.url } target="_blank" rel="noopener noreferrer">
-            <img src="images/sample-1.jpg" alt={ post.author }/>
-          </a>
+            <img src={ post.image ? post.image : "images/sample-1.jpg"} alt={ post.author }/>
         </div>
         <div className="card-content">
-          <h6>{ post.title }</h6>
+            <h6>{ post.title }</h6>
         </div>
+      </a>
         <div className="card-action">
           <a href={ post.comments_url } target="_blank">{ post.comments } comments</a>
           <span>{ post.source }</span>
