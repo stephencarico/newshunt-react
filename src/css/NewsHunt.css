@@ -1,56 +1,86 @@
 nav {
-  background-color: #fff;
+  background-color: #262626;
+  position: fixed;
+  z-index: +1;
 }
 
-body {
-  background-color: #f4f4f4;
+nav .brand-logo {
+  padding: 1rem;
 }
 
-ul li a {
-  color: #666;
+nav ul li {
+  padding: 1em;
 }
 
-ul li {
-  color: #666;
+nav ul li.active {
+  background-color: #ffab40;
 }
 
-.brand-logo {
-  color: #666;
+.col {
+  padding: 1.5em !important;
+}
+
+#logo {
+  color: #98ff98;
+  text-align: center;
+  font-style: italic
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-content {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .movedown {
+        position: relative;
+        padding-top: 8.5em !important;;
+    }
+}
+
+.nav-content {
+  background-color: #262626;
+}
+
+.card .card-image img {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 span {
   margin-right: 0.35em;
 }
 
-.card-action {
-  color: #666;
-}
-
 footer {
   position: relative;
-  padding-top: 100px;
+  padding-top: 2em;
   text-align: center;
 }
 
 .movedown {
-  padding-top: 75px;
+  position: relative;
+  padding-top: 7em;
 }
 
 .brand-logo {
-  /*width: 170px;*/
-  max-height: 70px;
+  max-height: 2.3em;
 }
 
 .card-content {
-  padding: 12px !important;
+  padding: 0.8em !important;
+  padding-left: 1.5em !important;
+  padding-right: 1.5em !important;
 }
 
-ul li .right {
-  color: #fff !important;
-}
-
-nav.nav-extended .nav-wrapper {
-  max-height: 65px
+.row {
+  margin-bottom: 0.1em;
 }
 
 .tab:hover {
@@ -59,18 +89,33 @@ nav.nav-extended .nav-wrapper {
   color: white;
 }
 
-a:hover {
-  color: #60caff;
-}
-
 .card:hover {
   transform: scale(1.02);
 }
 
-ul > .tabs {
-  display: inline-block;
-}
-.tabs > .active {
-  background-color: #ffab40 !important;
+.error-message {
+  background-color: #ff7272;
+  z-index: +1;
+  margin-top: -1em;
   color: white;
+  padding: 1em;
+}
+
+a:hover {
+  color: #039be5;
+}
+
+.progress {
+  z-index: +1;
+  margin-top: -4.1em;
+  padding: 0.5em;
+}
+
+.spinner-layer {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-links a {
+  color: #039be5;
 }

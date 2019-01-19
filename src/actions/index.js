@@ -16,6 +16,7 @@ export const VisibilityFilters = {
 export const REQUEST_POSTS = 'REQUEST_POSTS';
 export const RECEIVE_POSTS = 'RECEIVE_POSTS';
 export const INVALIDATE_SOURCE = 'INVALIDATE_SOURCE';
+export const ERROR = 'ERROR';
 
 export const invalidateSource = () => ({
   type: INVALIDATE_SOURCE
@@ -31,14 +32,16 @@ export const receivePosts = json => ({
   receivedAt: Date.now()
 })
 
+export const errors = () => ({
+  type: ERROR
+})
+
 const fetchPosts = () => dispatch => {
   dispatch(requestPosts())
-  // TESTING
-  // return dispatch(receivePosts(getAllPosts().map(child => child)))
-  // DEPLOYMENT
-  return fetch('https://newshunt-server.herokuapp.com/api/all')
+  return fetch('https://threadz-server.herokuapp.com/api/all')
     .then(response => response.json())
     .then(json => dispatch(receivePosts(json.map(child => child))))
+    .catch(error => dispatch(errors()))
 }
 
 const shouldFetchPosts = (state) => {

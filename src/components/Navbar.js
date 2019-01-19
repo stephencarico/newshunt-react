@@ -3,26 +3,39 @@ import FilterTab from '../containers/FilterTab'
 import { VisibilityFilters } from '../actions'
 
 const Navbar = () => (
-  <div className="navbar-fixed">
-      <nav className="nav-extended">
-        <div className="nav-wrapper">
-          <img className="brand-logo center" src="images/news-hunt-color.png" alt="news-hunt" />
-        </div>
-        <div className="container nav-wrapper hide-mobile">
-          <div className="nav-content">
-            <span>
-              <ul className="tabs tabs-fixed-width tabs-transparent">
-                <FilterTab filter={VisibilityFilters.LOAD_ALL}>All</FilterTab>
-                <FilterTab filter={VisibilityFilters.LOAD_HACKER_NEWS}>Hacker News</FilterTab>
-                <FilterTab filter={VisibilityFilters.LOAD_REDDIT}>Reddit</FilterTab>
-                <FilterTab filter={VisibilityFilters.LOAD_PRODUCT_HUNT}>Product Hunt</FilterTab>
-                <FilterTab filter={VisibilityFilters.LOAD_GITHUB_TRENDING}>Github Trending</FilterTab>
-              </ul>
-            </span>
-          </div>
-        </div>
-      </nav>
+  <nav>
+    <div className="nav-wrapper container">
+      <img className="brand-logo" src="images/threadz-logo.png" alt="threadz-logo"></img>
+      <ul id="nav-mobile" className="right hide-on-med-and-down">
+        <FilterTab filter={VisibilityFilters.LOAD_ALL}>
+          <i className="fa fa-globe" aria-hidden="true"></i>
+        </FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_HACKER_NEWS}>HACKER NEWS</FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_REDDIT}>REDDIT</FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_PRODUCT_HUNT}>PRODUCT HUNT</FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_GITHUB_TRENDING}>GITHUB TRENDING</FilterTab>
+      </ul>
     </div>
+    <div className="nav-content">
+      <ul className="tabs tabs-transparent">
+        <FilterTab filter={VisibilityFilters.LOAD_ALL}>
+          <i className="fa fa-globe" aria-hidden="true"></i>
+        </FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_HACKER_NEWS}>
+          <i className="fab fa-hacker-news" aria-hidden="true"></i>
+        </FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_REDDIT}>
+          <i className="fab fa-reddit" aria-hidden="true"></i>
+        </FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_PRODUCT_HUNT}>
+          <i className="fab fa-product-hunt" aria-hidden="true"></i>
+        </FilterTab>
+        <FilterTab filter={VisibilityFilters.LOAD_GITHUB_TRENDING}>
+          <i className="fab fa-github" aria-hidden="true"></i>
+        </FilterTab>
+      </ul>
+    </div>
+  </nav>
 )
 
 export default Navbar
