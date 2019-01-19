@@ -16,6 +16,10 @@ nav ul li.active {
   background-color: #ffab40;
 }
 
+.col {
+  padding: 1.5em !important;
+}
+
 #logo {
   color: #98ff98;
   text-align: center;
@@ -97,17 +101,13 @@ footer {
   padding: 1em;
 }
 
-/*a {
-  color: #000;
-}*/
-
 a:hover {
   color: #039be5;
 }
 
 .progress {
   z-index: +1;
-  margin-top: -1em;
+  margin-top: -4.1em;
   padding: 0.5em;
 }
 

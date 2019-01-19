@@ -16,7 +16,6 @@ const Post = ({post}) => {
   }
 
   return (<div className="row">
-    <div className="col s12 m6">
       <div className="card">
       <a href={ post.url } target="_blank" rel="noopener noreferrer">
         <div className="card-image">
@@ -34,7 +33,6 @@ const Post = ({post}) => {
           <span> { post.points } pts by { post.author } </span>
         </div>
       </div>
-    </div>
   </div>)
 }
 

@@ -36,22 +36,9 @@ export const errors = () => ({
   type: ERROR
 })
 
-// const splitArray = json => dispatch => {
-//   let posts = []
-//   json.forEach((item, index) => {
-//     if (index % 2) {
-//       posts.push([posts[index - 1], posts[index]]);
-//     }
-//   });
-//   return dispatch(receivePosts(posts))
-// }
-
 const fetchPosts = () => dispatch => {
   dispatch(requestPosts())
-  // TESTING
-  // return dispatch(receivePosts(getAllPosts().map(child => child)))
-  // DEPLOYMENT
-  return fetch('https://newshunt-server.herokuapp.com/api/all')
+  return fetch('https://threadz-server.herokuapp.com/api/all')
     .then(response => response.json())
     .then(json => dispatch(receivePosts(json.map(child => child))))
     .catch(error => dispatch(errors()))
