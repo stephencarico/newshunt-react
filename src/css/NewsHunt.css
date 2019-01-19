@@ -75,6 +75,10 @@ footer {
   padding-right: 1.5em !important;
 }
 
+.row {
+  margin-bottom: 0.1em;
+}
+
 .tab:hover {
   cursor: pointer;
   background-color: #039be5;
