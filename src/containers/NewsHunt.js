@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchPostsIfNeeded } from '../actions';
+import { fetchPostsIfNeeded, keepHerokuAlive } from '../actions';
 import { connect } from 'react-redux';
 import Navbar from '../components/Navbar';
 import VisibleFeed from './VisibleFeed';
@@ -14,6 +14,7 @@ class NewsHunt extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(fetchPostsIfNeeded());
+    keepHerokuAlive();
   }
 
   render() {

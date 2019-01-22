@@ -58,3 +58,11 @@ export const fetchPostsIfNeeded = () => (dispatch, getState) => {
     return dispatch(fetchPosts())
   }
 }
+
+export const keepHerokuAlive = () => {
+  setInterval(function() {
+      fetch("https://threadz-server.herokuapp.com");
+      fetch("https://threadz-react.herokuapp.com");
+  }, 3300000); // every 55 minutes
+}
+
