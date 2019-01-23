@@ -1,0 +1,110 @@
+$nav-gray: #262626;
+$active-orange: #ffab40;
+$text-gray: #808080;
+$hover-blue: #38bcfc;
+
+nav {
+  background-color: $nav-gray;
+  position: fixed;
+  z-index: +1;
+  .brand-logo {
+    max-height: 2.3em;
+    padding: 1rem;
+  }
+  ul li {
+    padding: 1em;
+  }
+  .active {
+    background-color: $active-orange !important;
+  }
+  .nav-content {
+    background-color: $nav-gray;
+  }
+  .tab:hover {
+    cursor: pointer;
+    background-color: #039be5;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-content {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .movedown {
+        position: relative;
+        padding-top: 8.5em !important;;
+    }
+}
+
+.movedown {
+  position: relative;
+  padding-top: 7em;
+}
+
+.card {
+  .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .card-content {
+    padding: 0.8em !important;
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
+  }
+  &:hover {
+    transform: scale(1.02);
+  }
+  span {
+    margin-right: 0.35em;
+  }
+}
+
+.col {
+  padding: 1.5em !important;
+}
+
+.row {
+  margin-bottom: 0.1em;
+}
+
+.error-message {
+  background-color: #ff7272;
+  z-index: +1;
+  margin-top: -1em;
+  color: white;
+  padding: 1em;
+}
+
+a {
+  &:hover {
+    color: $hover-blue;
+  }
+  &:visited {
+    color: $text-gray;
+    &:hover {
+      color: $hover-blue;
+    }
+  }
+}
+
+.progress {
+  z-index: +1;
+  margin-top: -4.1em;
+  padding: 0.5em;
+}
+
+footer {
+  position: relative;
+  padding-top: 2em;
+  text-align: center;
+}

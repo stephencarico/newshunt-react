@@ -5,7 +5,7 @@ import * as ReactRedux from 'react-redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger'
 import rootReducer from './reducers';
-import NewsHunt from './containers/NewsHunt';
+import Threadz from './containers/threadz';
 import * as serviceWorker from './serviceWorker';
 
 const middleware = [ thunk ];
@@ -20,6 +20,6 @@ const store = createStore(
 
 render(
   <ReactRedux.Provider store={store}>
-    <NewsHunt />
+    <Threadz />
   </ReactRedux.Provider>, document.getElementById('root'));
 serviceWorker.unregister();

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NewsHunt from './NewsHunt';
+import threadz from './threadz';
 
-describe('NewsHunt', () => {
+describe('threadz', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<NewsHunt />, div)
+    ReactDOM.render(<threadz />, div)
   });
 });

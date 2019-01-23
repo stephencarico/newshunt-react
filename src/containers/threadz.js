@@ -8,9 +8,9 @@ import Footer from '../components/Footer';
 import Error from '../components/Error'
 import '../css/materialize.min.css';
 import '../css/fontawesome-free/css/all.min.css';
-import '../css/NewsHunt.css';
+import '../css/threadz.scss';
 
-class NewsHunt extends Component {
+class threadz extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(fetchPostsIfNeeded());
@@ -39,4 +39,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(NewsHunt);
+export default connect(mapStateToProps)(threadz);
