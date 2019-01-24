@@ -7,6 +7,7 @@ import { createLogger } from 'redux-logger'
 import rootReducer from './reducers';
 import Threadz from './containers/threadz';
 import * as serviceWorker from './serviceWorker';
+require('newrelic');
 
 const middleware = [ thunk ];
 if (process.env.NODE_ENV !== 'production') {
