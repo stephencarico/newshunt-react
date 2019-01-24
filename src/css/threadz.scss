@@ -1,7 +1,4 @@
-$nav-gray: #262626;
-$active-orange: #ffab40;
-$text-gray: #808080;
-$hover-blue: #38bcfc;
+@import "colors";
 
 nav {
   background-color: $nav-gray;
@@ -22,7 +19,7 @@ nav {
   }
   .tab:hover {
     cursor: pointer;
-    background-color: #039be5;
+    background-color: $tab-hover-blue;
     color: white;
   }
 }
@@ -78,7 +75,7 @@ nav {
 }
 
 .error-message {
-  background-color: #ff7272;
+  background-color: $error-orange;
   z-index: +1;
   margin-top: -1em;
   color: white;
@@ -87,12 +84,12 @@ nav {
 
 a {
   &:hover {
-    color: $hover-blue;
+    color: $link-hover-blue;
   }
   &:visited {
     color: $text-gray;
     &:hover {
-      color: $hover-blue;
+      color: $link-hover-blue;
     }
   }
 }
