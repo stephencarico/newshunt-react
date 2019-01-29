@@ -1,3 +1,7 @@
+# ![threadz](https://github.com/stephencarico/threadz/blob/master/public/images/promo.jpg)
+
+Access trending posts from Hacker News, Reddit, Product Hunt and GitHub Trending altogether in a beatuifully styled fashion.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,3 +46,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## License
+
+MIT © [Stephen Carico](https://stephencarico.com)
